@@ -1,0 +1,28 @@
+buildscript {
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.2.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.21"
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+ext {
+    compileSdk = 31
+    minSdk = 21
+    targetSdk = 31
+
+    compose_version = '1.2.0-beta01'
+    activityCompose = '1.4.0'
+    viewModelCompose ='2.5.0-alpha02'
+    material ='1.5.0'
+    appCompat ='1.4.1'
+    androidCoreKtx = '1.7.0'
+    desugarJdkVersion = '1.1.5'
+}
